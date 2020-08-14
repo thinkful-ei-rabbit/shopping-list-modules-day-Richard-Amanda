@@ -9,7 +9,7 @@ const main = function () {
 
 
 
-/* store.addItem('bananas');
+store.addItem('bananas');
 store.addItem('apples');
 store.addItem('rice');
 // grab the id of the first store item (bananas)
@@ -18,7 +18,7 @@ let id = store.items[0].id;
 store.findAndDelete(id);
 shoppingList.render();
 
- */
+
 
 
 $(main);

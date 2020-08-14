@@ -5,24 +5,26 @@ let hideCheckedItems = false;
 
 
 
-/* function findById(id){
-  return items.find('item-id');
+function findById(id){
+  return this.items.find(function (item){
+    return item.id === id;
+  });
 }
 
 
 function addItem(name){
   try {
     item.validateName(name);
-    this.items.push(item.create(name));
-
+    items.push(item.create(name));
   } catch(error) {
     console.log(error);
   }
 }
 
-function findAndToggleChecked(id){
-  let foundItem = findById(id); 
-  foundItem = !items.checked;
+function findAndToggleChecked(id){ 
+  let foundItem = this.findById(id);
+  console.log(foundItem, id);
+  foundItem.checked = !foundItem.checked;
 }
 
 function findAndUpdateName(id, newName){
@@ -39,6 +41,11 @@ function findAndDelete(id) {
   this.items.splice(index, 1);
 }
 
+function toggleCheckedFilter() {
+  hideCheckedItems = !hideCheckedItems;
+}
+
+
 export default {
   items,
   hideCheckedItems,
@@ -46,13 +53,15 @@ export default {
   addItem,
   findAndToggleChecked,
   findAndUpdateName,
-  findAndDelete
+  findAndDelete,
+  toggleCheckedFilter
 };
 
- */
 
+
+/* 
 
 export default {
   items,
   hideCheckedItems,
-};  
+};   */
